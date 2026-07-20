@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/clevercarehealthplan-fhir-openapi.yml
+docs: https://clevercarehealthplan.com/fhir-api-developer-resources/
+notes: >-
+  SMART-on-FHIR OAuth 2.0 with OpenID Connect, confirmed from the server
+  /.well-known/smart-configuration and FHIR CapabilityStatement security.service
+  (SMART-on-FHIR). PKCE S256 supported; token_endpoint_auth_methods
+  client_secret_basic and client_secret_post; grant types authorization_code
+  and client_credentials. Provider Directory and Drug Formulary resources are
+  public (rate limited); Patient Access resources require OAuth 2.0.
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+  - clientCredentials
+schemes:
+- name: smartOnFhir
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://fhir-portal.clevercarehealthplan.com/oauth2/authorize
+    tokenUrl: https://fhir-portal.clevercarehealthplan.com/oauth2/token
+    scopes: 4
+  - flow: clientCredentials
+    tokenUrl: https://fhir-portal.clevercarehealthplan.com/oauth2/token
+    scopes: 2
+  description: SMART-on-FHIR OAuth 2.0 (PKCE S256), OpenID Connect enabled.
+  sources:
+  - openapi/clevercarehealthplan-fhir-openapi.yml
