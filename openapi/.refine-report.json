@@ -1,0 +1,18 @@
+{
+  "provider": "clevercarehealthplan",
+  "sources": [
+    "clevercarehealthplan-drug-formulary-api-openapi.yml",
+    "clevercarehealthplan-patient-access-api-openapi.yml",
+    "clevercarehealthplan-provider-directory-api-openapi.yml"
+  ],
+  "outputs": [
+    "clevercarehealthplan-drug-formulary-api-openapi.yml",
+    "clevercarehealthplan-patient-access-api-openapi.yml",
+    "clevercarehealthplan-provider-directory-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

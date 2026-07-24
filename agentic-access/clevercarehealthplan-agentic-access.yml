@@ -1,0 +1,302 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/clevercarehealthplan-fhir-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 27
+  by_action_class:
+    connected: 27
+  by_consequence:
+    read: 27
+  human_in_the_loop_required: 0
+operations:
+- path: /Patient
+  method: get
+  operationId: searchPatient
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - patient/*.cruds
+    - user/*.cruds
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Patient/{id}
+  method: get
+  operationId: readPatient
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - patient/*.cruds
+    - user/*.cruds
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /ExplanationOfBenefit
+  method: get
+  operationId: searchExplanationOfBenefit
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - patient/*.cruds
+    - user/*.cruds
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /ExplanationOfBenefit/{id}
+  method: get
+  operationId: readExplanationOfBenefit
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - patient/*.cruds
+    - user/*.cruds
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Coverage
+  method: get
+  operationId: searchCoverage
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - patient/*.cruds
+    - user/*.cruds
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Coverage/{id}
+  method: get
+  operationId: readCoverage
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - patient/*.cruds
+    - user/*.cruds
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Organization
+  method: get
+  operationId: searchOrganization
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Organization/{id}
+  method: get
+  operationId: readOrganization
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /OrganizationAffiliation
+  method: get
+  operationId: searchOrganizationAffiliation
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /OrganizationAffiliation/{id}
+  method: get
+  operationId: readOrganizationAffiliation
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Practitioner
+  method: get
+  operationId: searchPractitioner
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Practitioner/{id}
+  method: get
+  operationId: readPractitioner
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /PractitionerRole
+  method: get
+  operationId: searchPractitionerRole
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /PractitionerRole/{id}
+  method: get
+  operationId: readPractitionerRole
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /HealthcareService
+  method: get
+  operationId: searchHealthcareService
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /HealthcareService/{id}
+  method: get
+  operationId: readHealthcareService
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Location
+  method: get
+  operationId: searchLocation
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Location/{id}
+  method: get
+  operationId: readLocation
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Endpoint
+  method: get
+  operationId: searchEndpoint
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Endpoint/{id}
+  method: get
+  operationId: readEndpoint
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /InsurancePlan
+  method: get
+  operationId: searchInsurancePlan
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /InsurancePlan/{id}
+  method: get
+  operationId: readInsurancePlan
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /MedicationKnowledge
+  method: get
+  operationId: searchMedicationKnowledge
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /MedicationKnowledge/{id}
+  method: get
+  operationId: readMedicationKnowledge
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /List
+  method: get
+  operationId: searchList
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /List/{id}
+  method: get
+  operationId: readList
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /metadata
+  method: get
+  operationId: getCapabilityStatement
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none

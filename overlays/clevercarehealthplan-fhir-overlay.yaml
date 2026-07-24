@@ -1,0 +1,14 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Clever Care Health Plan FHIR R4 API
+  version: 1.0.0
+extends: openapi/clevercarehealthplan-fhir-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-rating: 3
+      x-standards: [hl7-fhir-r4, smart-on-fhir, carin-bb, us-core, cms-9115-f, hipaa]
+      x-agent-ready: true
+  - target: $.info
+    update:
+      x-well-known: https://fhir.clevercarehealthplan.com/r4/.well-known/smart-configuration

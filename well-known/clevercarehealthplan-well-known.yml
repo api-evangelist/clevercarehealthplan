@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: live fetch of /.well-known/ discovery endpoints
+hosts:
+  - host: https://fhir.clevercarehealthplan.com/r4
+    documents:
+      - path: /r4/.well-known/smart-configuration
+        status: 200
+        file: clevercarehealthplan-smart-configuration.json
+        note: SMART-on-FHIR / OAuth 2.0 discovery document (RFC 8414 style)
+      - path: /r4/metadata
+        status: 200
+        file: null
+        note: FHIR R4 CapabilityStatement (fetched; transcribed into openapi/clevercarehealthplan-fhir-openapi.yml)
+  - host: https://clevercarehealthplan.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404

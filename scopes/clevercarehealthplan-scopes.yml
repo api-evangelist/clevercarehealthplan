@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/clevercarehealthplan-fhir-openapi.yml
+docs: https://fhir.clevercarehealthplan.com/r4/.well-known/smart-configuration
+notes: >-
+  Scopes confirmed verbatim from the server SMART-on-FHIR discovery document
+  (scopes_supported). SMART v2 wildcard scopes; patient/user CRUDS. Patient
+  Access resources (Patient, ExplanationOfBenefit, Coverage) require patient/*
+  or user/* scope; Provider Directory and Drug Formulary resources are public.
+schemes:
+- name: smartOnFhir
+  source: openapi/clevercarehealthplan-fhir-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://fhir-portal.clevercarehealthplan.com/oauth2/authorize
+    tokenUrl: https://fhir-portal.clevercarehealthplan.com/oauth2/token
+  - flow: clientCredentials
+    tokenUrl: https://fhir-portal.clevercarehealthplan.com/oauth2/token
+  description: SMART-on-FHIR OAuth 2.0 (PKCE S256), OpenID Connect enabled.
+scopes:
+- scope: launch/patient
+  description: Launch in patient context
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/clevercarehealthplan-fhir-openapi.yml
+- scope: openid
+  description: OpenID Connect authentication
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/clevercarehealthplan-fhir-openapi.yml
+- scope: patient/*.cruds
+  description: Patient-scoped access to permitted resources
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/clevercarehealthplan-fhir-openapi.yml
+- scope: user/*.cruds
+  description: User-scoped access to permitted resources
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/clevercarehealthplan-fhir-openapi.yml

@@ -1,0 +1,83 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/clevercarehealthplan-fhir-openapi.yml
+notes: >-
+  Entity graph derived from the FHIR R4 resources exposed by the Clever Care
+  CapabilityStatement and standard FHIR reference semantics. Relationships reflect
+  standard FHIR reference fields between these resource types.
+entities:
+  - name: Patient
+    domain: patient-access
+  - name: Coverage
+    domain: patient-access
+  - name: ExplanationOfBenefit
+    domain: patient-access
+  - name: Organization
+    domain: provider-directory
+  - name: OrganizationAffiliation
+    domain: provider-directory
+  - name: Practitioner
+    domain: provider-directory
+  - name: PractitionerRole
+    domain: provider-directory
+  - name: HealthcareService
+    domain: provider-directory
+  - name: Location
+    domain: provider-directory
+  - name: Endpoint
+    domain: provider-directory
+  - name: InsurancePlan
+    domain: provider-directory
+  - name: MedicationKnowledge
+    domain: drug-formulary
+  - name: List
+    domain: drug-formulary
+relationships:
+  - from: Coverage
+    to: Patient
+    type: belongs_to
+    via: beneficiary
+  - from: ExplanationOfBenefit
+    to: Patient
+    type: belongs_to
+    via: patient
+  - from: ExplanationOfBenefit
+    to: Coverage
+    type: has_one
+    via: insurance.coverage
+  - from: PractitionerRole
+    to: Practitioner
+    type: belongs_to
+    via: practitioner
+  - from: PractitionerRole
+    to: Organization
+    type: belongs_to
+    via: organization
+  - from: PractitionerRole
+    to: Location
+    type: has_many
+    via: location
+  - from: PractitionerRole
+    to: HealthcareService
+    type: has_many
+    via: healthcareService
+  - from: OrganizationAffiliation
+    to: Organization
+    type: belongs_to
+    via: organization
+  - from: HealthcareService
+    to: Organization
+    type: belongs_to
+    via: providedBy
+  - from: InsurancePlan
+    to: Organization
+    type: belongs_to
+    via: ownedBy
+  - from: Endpoint
+    to: Organization
+    type: belongs_to
+    via: managingOrganization
+  - from: List
+    to: MedicationKnowledge
+    type: has_many
+    via: entry.item

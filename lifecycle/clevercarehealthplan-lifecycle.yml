@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://clevercarehealthplan.com/fhir-api-developer-resources/ ,
+  https://fhir.clevercarehealthplan.com/r4/metadata
+versioning:
+  scheme: uri-path
+  current: r4
+  fhir_version: 4.0.1
+  docs: https://clevercarehealthplan.com/fhir-api-developer-resources/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No published deprecation policy or Sunset/Deprecation header support found.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+notes: >-
+  Version is pinned by the FHIR release in the base path (/r4). No public status
+  page, SLA, or deprecation policy was found on the developer resources or WSO2
+  devportal at time of enrichment.

@@ -1,0 +1,28 @@
+# Clever Care Health Plan FHIR API
+
+> Clever Care Health Plan is a California Medicare Advantage (HMO and HMO C-SNP) plan blending Eastern and Western medicine for seniors. It publishes an HL7 FHIR R4 API implementing the CMS Interoperability and Patient Access final rule (CMS-9115-F): a secured (SMART-on-FHIR OAuth 2.0 / OpenID Connect) Patient Access API and public (rate-limited) Provider Directory and Drug Formulary APIs, served on WSO2 Open Healthcare. ExplanationOfBenefit conforms to CARIN Blue Button (C4BB).
+
+## APIs
+- [FHIR R4 base URL](https://fhir.clevercarehealthplan.com/r4): resource endpoints (application/fhir+json)
+- [CapabilityStatement](https://fhir.clevercarehealthplan.com/r4/metadata): FHIR 4.0.1 server metadata
+- [SMART configuration](https://fhir.clevercarehealthplan.com/r4/.well-known/smart-configuration): OAuth 2.0 / OIDC discovery
+
+## Docs
+- [FHIR API developer resources](https://clevercarehealthplan.com/fhir-api-developer-resources/)
+- [FHIR API documentation portal](https://fhir-portal.clevercarehealthplan.com/api-docs/)
+- [Developer portal (WSO2)](https://fhir-portal.clevercarehealthplan.com/devportal)
+- [Interoperability and patient access](https://clevercarehealthplan.com/interoperability-and-patient-access/)
+
+## Specs and artifacts
+- [OpenAPI (FHIR R4, generated)](https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/openapi/clevercarehealthplan-fhir-openapi.yml)
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/authentication/clevercarehealthplan-authentication.yml)
+- [OAuth scopes](https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/scopes/clevercarehealthplan-scopes.yml)
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/conformance/clevercarehealthplan-conformance.yml)
+- [Data model](https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/data-model/clevercarehealthplan-data-model.yml)
+- [Agent skills](https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/skills/_index.yml)
+
+## Company
+- [Website](https://clevercarehealthplan.com)
+- [Privacy practices](https://clevercarehealthplan.com/privacy-practices/)
+- [Terms of use](https://clevercarehealthplan.com/terms-of-use/)
+- [Medicare compliance](https://clevercarehealthplan.com/medicare-compliance/)

@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/clevercarehealthplan-fhir-openapi.yml
+format: fhir-operationoutcome
+notes: >-
+  This FHIR R4 API returns errors as a FHIR OperationOutcome resource
+  (application/fhir+json), not RFC 9457 problem+json. OperationOutcome.issue[]
+  carries severity (fatal|error|warning|information), a code, and diagnostics.
+envelope:
+  resourceType: OperationOutcome
+  field: issue[]
+problems:
+  - status: 401
+    title: Unauthorized
+    outcome_code: security
+    remediation: Obtain a valid SMART-on-FHIR OAuth 2.0 access token for secured Patient Access resources.
+    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPatient
+  - status: 403
+    title: Forbidden
+    outcome_code: forbidden
+    remediation: Token lacks the required patient/*.cruds or user/*.cruds scope for the resource.
+    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchExplanationOfBenefit
+  - status: 404
+    title: Not Found
+    outcome_code: not-found
+    remediation: The requested resource logical id does not exist.
+    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readPatient
+  - status: 429
+    title: Too Many Requests
+    outcome_code: throttled
+    remediation: Public Provider Directory / Drug Formulary endpoints are rate limited; back off and retry.
+    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchOrganization

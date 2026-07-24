@@ -1,27 +1,142 @@
 aid: clevercarehealthplan
-name: Clevercarehealthplan
-description: 'Clevercarehealthplan is a company surfaced as a portfolio company of norwest-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a
-  lead awaiting the enrichment pipeline.'
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clevercarehealthplan.png
+name: Clever Care Health Plan
+description: >-
+  Clever Care Health Plan is a California Medicare Advantage (HMO and HMO C-SNP)
+  insurer that blends Eastern and Western medicine for seniors. For developers it
+  publishes an HL7 FHIR R4 (4.0.1) API implementing the CMS Interoperability and
+  Patient Access final rule (CMS-9115-F): a secured Patient Access API (Patient,
+  Coverage, and CARIN Blue Button ExplanationOfBenefit) protected with
+  SMART-on-FHIR OAuth 2.0 / OpenID Connect, plus public, rate-limited Provider
+  Directory and Drug Formulary APIs. The FHIR server runs on WSO2 Open Healthcare
+  with a developer portal for app registration and API subscription.
 url: https://raw.githubusercontent.com/api-evangelist/clevercarehealthplan/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: fhir-api-found
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-- Unknown
-apis: []
+- Healthcare
+- Health Insurance
+- Medicare Advantage
+- FHIR
+- Interoperability
+- Patient Access
+- Provider Directory
+- Drug Formulary
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: clevercarehealthplan:clevercarehealthplan-drug-formulary-api
+  name: Clever Care Health Plan Drug Formulary API
+  description: Public (rate limited) drug formulary resources
+  humanURL: https://clevercarehealthplan.com/fhir-api-developer-resources/
+  baseURL: https://fhir.clevercarehealthplan.com/r4
+  tags:
+  - Drug Formulary
+  properties:
+  - type: OpenAPI
+    url: openapi/clevercarehealthplan-drug-formulary-api-openapi.yml
+  - type: Documentation
+    url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+  - type: APIReference
+    url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+- aid: clevercarehealthplan:clevercarehealthplan-patient-access-api
+  name: Clever Care Health Plan Patient Access API
+  description: Secured (OpenID Connect / OAuth 2.0) member data resources
+  humanURL: https://clevercarehealthplan.com/fhir-api-developer-resources/
+  baseURL: https://fhir.clevercarehealthplan.com/r4
+  tags:
+  - Patient Access
+  properties:
+  - type: OpenAPI
+    url: openapi/clevercarehealthplan-patient-access-api-openapi.yml
+  - type: Documentation
+    url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+  - type: APIReference
+    url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+- aid: clevercarehealthplan:clevercarehealthplan-provider-directory-api
+  name: Clever Care Health Plan Provider Directory API
+  description: Public (rate limited) provider directory resources
+  humanURL: https://clevercarehealthplan.com/fhir-api-developer-resources/
+  baseURL: https://fhir.clevercarehealthplan.com/r4
+  tags:
+  - Provider Directory
+  properties:
+  - type: OpenAPI
+    url: openapi/clevercarehealthplan-provider-directory-api-openapi.yml
+  - type: Documentation
+    url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+  - type: APIReference
+    url: https://fhir-portal.clevercarehealthplan.com/api-docs/
 common:
+- type: DeveloperPortal
+  url: https://fhir-portal.clevercarehealthplan.com/devportal
+- type: GettingStarted
+  url: https://clevercarehealthplan.com/fhir-api-developer-resources/
+- type: Documentation
+  url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+- type: APIReference
+  url: https://fhir-portal.clevercarehealthplan.com/api-docs/
+- type: SignUp
+  url: https://fhir-portal.clevercarehealthplan.com/devportal
+- type: Authentication
+  url: authentication/clevercarehealthplan-authentication.yml
+- type: OAuthScopes
+  url: scopes/clevercarehealthplan-scopes.yml
+- type: AgenticAccess
+  url: agentic-access/clevercarehealthplan-agentic-access.yml
+- type: MCPServer
+  url: mcp/clevercarehealthplan-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: WellKnown
+  url: well-known/clevercarehealthplan-well-known.yml
+- type: LLMsTxt
+  url: llms/clevercarehealthplan-llms.txt
+- type: Conformance
+  url: conformance/clevercarehealthplan-conformance.yml
+- type: Compliance
+  url: https://clevercarehealthplan.com/medicare-compliance/
+- type: ErrorCatalog
+  url: errors/clevercarehealthplan-problem-types.yml
+- type: Conventions
+  url: conventions/clevercarehealthplan-conventions.yml
+- type: Lifecycle
+  url: lifecycle/clevercarehealthplan-lifecycle.yml
+- type: DataModel
+  url: data-model/clevercarehealthplan-data-model.yml
+- type: DomainSecurity
+  url: security/clevercarehealthplan-domain-security.yml
+- type: PrivacyPolicy
+  url: https://clevercarehealthplan.com/privacy-practices/
+- type: TermsOfService
+  url: https://clevercarehealthplan.com/terms-of-use/
 - type: Website
   url: https://clevercarehealthplan.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

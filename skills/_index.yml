@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/clevercarehealthplan-fhir-openapi.yml
+skills:
+  - file: clevercarehealthplan-patient-access.md
+    name: Clever Care patient access (claims and coverage)
+    api: openapi/clevercarehealthplan-fhir-openapi.yml
+    operations: [searchPatient, readPatient, searchCoverage, searchExplanationOfBenefit, readExplanationOfBenefit]
+  - file: clevercarehealthplan-provider-directory.md
+    name: Clever Care provider directory search
+    api: openapi/clevercarehealthplan-fhir-openapi.yml
+    operations: [searchOrganization, searchPractitioner, searchPractitionerRole, searchLocation, searchHealthcareService, searchInsurancePlan]
+  - file: clevercarehealthplan-drug-formulary.md
+    name: Clever Care drug formulary lookup
+    api: openapi/clevercarehealthplan-fhir-openapi.yml
+    operations: [searchMedicationKnowledge, readMedicationKnowledge, searchList, readList]

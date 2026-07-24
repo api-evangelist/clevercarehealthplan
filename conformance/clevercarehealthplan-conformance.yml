@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://clevercarehealthplan.com/fhir-api-developer-resources/ ,
+  https://fhir.clevercarehealthplan.com/r4/metadata ,
+  https://fhir-portal.clevercarehealthplan.com/api-docs/ExplanationOfBenefit.html
+standards:
+  - id: hl7-fhir-r4
+    conforms: true
+    evidence: CapabilityStatement fhirVersion 4.0.1; application/fhir+json responses.
+  - id: smart-on-fhir
+    conforms: true
+    evidence: CapabilityStatement security.service SMART-on-FHIR; smart-configuration published.
+  - id: oauth2
+    conforms: true
+    evidence: OAuth 2.0 authorization_code and client_credentials flows with PKCE S256.
+  - id: oidc
+    conforms: true
+    evidence: sso-openid-connect capability; openid scope; OpenID Connect discovery.
+  - id: carin-bb
+    conforms: true
+    evidence: ExplanationOfBenefit conforms to C4BB Inpatient/Outpatient/Pharmacy/Professional profiles.
+  - id: cms-9115-f
+    conforms: true
+    evidence: Patient Access API and Provider Directory API per CMS Interoperability and Patient Access final rule.
+  - id: us-core
+    conforms: true
+    evidence: US Core FHIR profiles underpin CMS-9115-F Patient Access implementations (Patient/Coverage).
+  - id: hipaa
+    conforms: true
+    evidence: Medicare Advantage covered entity; HIPAA privacy practices published.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use FHIR OperationOutcome, not application/problem+json.
+compliance_program:
+  published: true
+  url: https://clevercarehealthplan.com/medicare-compliance/
+  posture:
+    - CMS Interoperability and Patient Access final rule (CMS-9115-F)
+    - HIPAA (Notice of Privacy Practices)
+    - Medicare Advantage compliance program

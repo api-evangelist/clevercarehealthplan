@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://fhir.clevercarehealthplan.com/r4/metadata ,
+  https://fhir-portal.clevercarehealthplan.com/api-docs/
+notes: >-
+  Cross-cutting semantics for the Clever Care FHIR R4 API. The API is read-only
+  (read + search-type interactions only); no create/update/delete operations are
+  exposed, so there is no idempotency-key contract (all interactions are safe GETs).
+authentication:
+  style: SMART-on-FHIR OAuth 2.0 / OpenID Connect
+  public_resources: Provider Directory + Drug Formulary (rate limited, no token)
+  secured_resources: Patient Access (Patient, ExplanationOfBenefit, Coverage)
+media_type:
+  request: application/fhir+json
+  response: application/fhir+json
+versioning:
+  style: uri-path
+  current: r4
+  base: https://fhir.clevercarehealthplan.com/r4
+  fhir_version: 4.0.1
+pagination:
+  style: fhir-bundle-link
+  mechanism: Bundle.link entries with relation "next"/"self"/"previous"
+  response_field: Bundle.entry
+idempotency:
+  supported: false
+  reason: Read-only API; only FHIR read and search-type (GET) interactions are exposed.
+search:
+  common_params: [_id, _lastUpdated, _profile]
+  prefixes: [eq, ne, gt, lt, ge, le]
+  required_example: ExplanationOfBenefit requires the patient search parameter.
+error_envelope:
+  format: fhir-operationoutcome
+  schema: OperationOutcome.issue[] (severity, code, diagnostics)
+rate_limiting:
+  public_apis: Provider Directory and Drug Formulary are rate limited (WSO2 API gateway).
+cross_links:
+  authentication: authentication/clevercarehealthplan-authentication.yml
+  scopes: scopes/clevercarehealthplan-scopes.yml
+  errors: errors/clevercarehealthplan-problem-types.yml
+  lifecycle: lifecycle/clevercarehealthplan-lifecycle.yml
