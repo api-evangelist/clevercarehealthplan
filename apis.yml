@@ -91,6 +91,8 @@ apis:
   - type: APIReference
     url: https://fhir-portal.clevercarehealthplan.com/api-docs/
 common:
+- type: Overlay
+  url: overlays/clevercarehealthplan-fhir-overlay.yaml
 - type: DeveloperPortal
   url: https://fhir-portal.clevercarehealthplan.com/devportal
 - type: GettingStarted
