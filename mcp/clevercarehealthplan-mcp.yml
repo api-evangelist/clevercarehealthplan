@@ -2,55 +2,60 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/clevercarehealthplan-fhir-openapi.yml
-notes: >-
-  No official hosted MCP server was found for Clever Care Health Plan. This is a
-  candidate tool list derived from the FHIR R4 OpenAPI operations. Patient Access
-  tools require a SMART-on-FHIR OAuth 2.0 token (patient/*.cruds or user/*.cruds);
-  Provider Directory and Drug Formulary tools are public (rate limited).
+notes: No official hosted MCP server was found for Clever Care Health Plan. This is a candidate tool list
+  derived from the FHIR R4 OpenAPI operations. Patient Access tools require a SMART-on-FHIR OAuth 2.0
+  token (patient/*.cruds or user/*.cruds); Provider Directory and Drug Formulary tools are public (rate
+  limited).
 server:
   name: clevercarehealthplan-fhir
   transport: http
   url: null
 tools:
-  - name: search_patient
-    description: Search Patient (secured)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPatient
-  - name: read_patient
-    description: Read a Patient by id (secured)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readPatient
-  - name: search_explanation_of_benefit
-    description: Search ExplanationOfBenefit / claims, CARIN Blue Button (secured)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchExplanationOfBenefit
-  - name: read_explanation_of_benefit
-    description: Read an ExplanationOfBenefit by id (secured)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readExplanationOfBenefit
-  - name: search_coverage
-    description: Search Coverage (secured)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchCoverage
-  - name: read_coverage
-    description: Read a Coverage by id (secured)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readCoverage
-  - name: search_organization
-    description: Search provider directory Organization (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchOrganization
-  - name: search_practitioner
-    description: Search provider directory Practitioner (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPractitioner
-  - name: search_practitioner_role
-    description: Search PractitionerRole (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPractitionerRole
-  - name: search_location
-    description: Search provider directory Location (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchLocation
-  - name: search_healthcare_service
-    description: Search HealthcareService (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchHealthcareService
-  - name: search_insurance_plan
-    description: Search InsurancePlan (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchInsurancePlan
-  - name: search_medication_knowledge
-    description: Search drug formulary MedicationKnowledge (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchMedicationKnowledge
-  - name: search_list
-    description: Search formulary drug List resources (public)
-    source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchList
+- name: search_patient
+  description: Search Patient (secured)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPatient
+- name: read_patient
+  description: Read a Patient by id (secured)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readPatient
+- name: search_explanation_of_benefit
+  description: Search ExplanationOfBenefit / claims, CARIN Blue Button (secured)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchExplanationOfBenefit
+- name: read_explanation_of_benefit
+  description: Read an ExplanationOfBenefit by id (secured)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readExplanationOfBenefit
+- name: search_coverage
+  description: Search Coverage (secured)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchCoverage
+- name: read_coverage
+  description: Read a Coverage by id (secured)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#readCoverage
+- name: search_organization
+  description: Search provider directory Organization (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchOrganization
+- name: search_practitioner
+  description: Search provider directory Practitioner (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPractitioner
+- name: search_practitioner_role
+  description: Search PractitionerRole (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchPractitionerRole
+- name: search_location
+  description: Search provider directory Location (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchLocation
+- name: search_healthcare_service
+  description: Search HealthcareService (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchHealthcareService
+- name: search_insurance_plan
+  description: Search InsurancePlan (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchInsurancePlan
+- name: search_medication_knowledge
+  description: Search drug formulary MedicationKnowledge (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchMedicationKnowledge
+- name: search_list
+  description: Search formulary drug List resources (public)
+  source_operation: openapi/clevercarehealthplan-fhir-openapi.yml#searchList
+deployment:
+  mode: none
+  verified: derived
+  tools: 14
+  checked: '2026-08-12'
+  source: catalog MCP census

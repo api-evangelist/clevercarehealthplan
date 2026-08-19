@@ -1,0 +1,243 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Clever Care Health Plan FHIR R4 Drug Formulary Patient Access API",
+    "version": "4.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Patient Access",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Patient",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Patient",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://fhir-portal.clevercarehealthplan.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Search Patient"
+        },
+        {
+          "info": {
+            "name": "Read Patient by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Patient/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://fhir-portal.clevercarehealthplan.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Read Patient by id"
+        },
+        {
+          "info": {
+            "name": "Search ExplanationOfBenefit (CARIN Blue Button)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/ExplanationOfBenefit",
+            "params": [
+              {
+                "name": "patient",
+                "value": "",
+                "type": "query",
+                "description": "Patient reference (required)."
+              },
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              },
+              {
+                "name": "identifier",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "service-date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://fhir-portal.clevercarehealthplan.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Search ExplanationOfBenefit (CARIN Blue Button)"
+        },
+        {
+          "info": {
+            "name": "Read ExplanationOfBenefit by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/ExplanationOfBenefit/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://fhir-portal.clevercarehealthplan.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Read ExplanationOfBenefit by id"
+        },
+        {
+          "info": {
+            "name": "Search Coverage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Coverage",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://fhir-portal.clevercarehealthplan.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Search Coverage"
+        },
+        {
+          "info": {
+            "name": "Read Coverage by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Coverage/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ],
+            "auth": {
+              "type": "oauth2",
+              "flow": "client_credentials",
+              "accessTokenUrl": "https://fhir-portal.clevercarehealthplan.com/oauth2/token",
+              "credentials": {
+                "clientId": "{{clientId}}",
+                "clientSecret": "{{clientSecret}}"
+              }
+            }
+          },
+          "docs": "Read Coverage by id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

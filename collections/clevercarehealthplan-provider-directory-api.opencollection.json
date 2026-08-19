@@ -1,0 +1,429 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Clever Care Health Plan FHIR R4 Drug Formulary Provider Directory API",
+    "version": "4.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Provider Directory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Organization",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search Organization"
+        },
+        {
+          "info": {
+            "name": "Read Organization by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Organization/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read Organization by id"
+        },
+        {
+          "info": {
+            "name": "Search OrganizationAffiliation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/OrganizationAffiliation",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search OrganizationAffiliation"
+        },
+        {
+          "info": {
+            "name": "Read OrganizationAffiliation by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/OrganizationAffiliation/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read OrganizationAffiliation by id"
+        },
+        {
+          "info": {
+            "name": "Search Practitioner",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Practitioner",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search Practitioner"
+        },
+        {
+          "info": {
+            "name": "Read Practitioner by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Practitioner/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read Practitioner by id"
+        },
+        {
+          "info": {
+            "name": "Search PractitionerRole",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/PractitionerRole",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search PractitionerRole"
+        },
+        {
+          "info": {
+            "name": "Read PractitionerRole by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/PractitionerRole/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read PractitionerRole by id"
+        },
+        {
+          "info": {
+            "name": "Search HealthcareService",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/HealthcareService",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search HealthcareService"
+        },
+        {
+          "info": {
+            "name": "Read HealthcareService by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/HealthcareService/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read HealthcareService by id"
+        },
+        {
+          "info": {
+            "name": "Search Location",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Location",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search Location"
+        },
+        {
+          "info": {
+            "name": "Read Location by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Location/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read Location by id"
+        },
+        {
+          "info": {
+            "name": "Search Endpoint",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Endpoint",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search Endpoint"
+        },
+        {
+          "info": {
+            "name": "Read Endpoint by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/Endpoint/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read Endpoint by id"
+        },
+        {
+          "info": {
+            "name": "Search InsurancePlan",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/InsurancePlan",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search InsurancePlan"
+        },
+        {
+          "info": {
+            "name": "Read InsurancePlan by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/InsurancePlan/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read InsurancePlan by id"
+        },
+        {
+          "info": {
+            "name": "FHIR CapabilityStatement (server metadata)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/metadata"
+          },
+          "docs": "FHIR CapabilityStatement (server metadata)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

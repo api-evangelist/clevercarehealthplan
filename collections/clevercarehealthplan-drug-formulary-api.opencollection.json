@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Clever Care Health Plan FHIR R4 Drug Formulary API",
+    "version": "4.0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Drug Formulary",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search MedicationKnowledge (Drug Formulary)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/MedicationKnowledge",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search MedicationKnowledge (Drug Formulary)"
+        },
+        {
+          "info": {
+            "name": "Read MedicationKnowledge by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/MedicationKnowledge/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read MedicationKnowledge by id"
+        },
+        {
+          "info": {
+            "name": "Search List (formulary drug lists)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/List",
+            "params": [
+              {
+                "name": "_id",
+                "value": "",
+                "type": "query",
+                "description": "Filter by logical id of the resource."
+              },
+              {
+                "name": "_lastUpdated",
+                "value": "",
+                "type": "query",
+                "description": "Filter by last modification date (prefixes eq,ne,gt,lt,ge,le)."
+              },
+              {
+                "name": "_profile",
+                "value": "",
+                "type": "query",
+                "description": "Filter by conformance to a named HL7 profile."
+              }
+            ]
+          },
+          "docs": "Search List (formulary drug lists)"
+        },
+        {
+          "info": {
+            "name": "Read List by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fhir.clevercarehealthplan.com/r4/List/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Logical id of the resource."
+              }
+            ]
+          },
+          "docs": "Read List by id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
