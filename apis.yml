@@ -103,6 +103,9 @@ apis:
   - type: APIReference
     url: https://fhir-portal.clevercarehealthplan.com/api-docs/
 common:
+- type: CapabilityMap
+  url: capabilities/clevercarehealthplan-capability-edges.yml
+  name: Clever Care Health Plan Business Capability Map
 - type: Overlay
   url: overlays/clevercarehealthplan-fhir-overlay.yaml
 - type: DeveloperPortal
