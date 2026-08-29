@@ -19,9 +19,7 @@ edges:
   capability_id_l1: BC-2900
   capability_name: Healthcare Interoperability Operations
   confidence: 0.7
-  evidence: '"implementing the CMS Interoperability and Patient Access final rule (CMS-9115-F)"; "Patient
-    Access resources (Patient, ExplanationOfBenefit, Coverage) are secured with SMART-on-FHIR / OAuth
-    2.0"'
-  reason: 'A SMART-on-FHIR patient-authorised FHIR R4 endpoint enabling patient-initiated sharing of Patient/Coverage/EOB
-    data — this is healthcare interoperability operations. Not registration or claims processing: the
-    operations are read/search only.'
+  evidence: '"Patient Access resources (Patient, ExplanationOfBenefit, Coverage) are secured with SMART-on-FHIR
+    / OAuth 2.0"; searchExplanationOfBenefit Search ExplanationOfBenefit (CARIN Blue Button)'
+  reason: A CMS-mandated Patient Access FHIR API enabling patient-initiated data sharing of claims and
+    coverage data — squarely healthcare interoperability operations.
