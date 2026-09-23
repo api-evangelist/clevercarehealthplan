@@ -1,9 +1,7 @@
 {
   "provider": "clevercarehealthplan",
   "sources": [
-    "clevercarehealthplan-drug-formulary-api-openapi.yml",
-    "clevercarehealthplan-patient-access-api-openapi.yml",
-    "clevercarehealthplan-provider-directory-api-openapi.yml"
+    "_original/clevercarehealthplan-fhir-openapi.yml"
   ],
   "outputs": [
     "clevercarehealthplan-drug-formulary-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "clevercarehealthplan-fhir-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "clevercarehealthplan-drug-formulary-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "clevercarehealthplan-patient-access-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "clevercarehealthplan-provider-directory-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
