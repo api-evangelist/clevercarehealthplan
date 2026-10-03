@@ -70,24 +70,53 @@ paths:
           $ref: '#/components/responses/OperationOutcome'
 components:
   responses:
-    Bundle:
-      description: A FHIR searchset Bundle of matching resources.
-      content:
-        application/fhir+json:
-          schema:
-            $ref: '#/components/schemas/Bundle'
     OperationOutcome:
       description: A FHIR OperationOutcome describing an error.
       content:
         application/fhir+json:
           schema:
             $ref: '#/components/schemas/OperationOutcome'
+    Bundle:
+      description: A FHIR searchset Bundle of matching resources.
+      content:
+        application/fhir+json:
+          schema:
+            $ref: '#/components/schemas/Bundle'
     Resource:
       description: A single FHIR resource.
       content:
         application/fhir+json:
           schema:
             type: object
+  parameters:
+    id:
+      name: _id
+      in: query
+      description: Filter by logical id of the resource.
+      required: false
+      schema:
+        type: string
+    resourceId:
+      name: id
+      in: path
+      description: Logical id of the resource.
+      required: true
+      schema:
+        type: string
+    lastUpdated:
+      name: _lastUpdated
+      in: query
+      description: Filter by last modification date (prefixes eq,ne,gt,lt,ge,le).
+      required: false
+      schema:
+        type: string
+    profile:
+      name: _profile
+      in: query
+      description: Filter by conformance to a named HL7 profile.
+      required: false
+      schema:
+        type: string
   schemas:
     Bundle:
       type: object
@@ -143,35 +172,6 @@ components:
                 type: string
               diagnostics:
                 type: string
-  parameters:
-    profile:
-      name: _profile
-      in: query
-      description: Filter by conformance to a named HL7 profile.
-      required: false
-      schema:
-        type: string
-    resourceId:
-      name: id
-      in: path
-      description: Logical id of the resource.
-      required: true
-      schema:
-        type: string
-    id:
-      name: _id
-      in: query
-      description: Filter by logical id of the resource.
-      required: false
-      schema:
-        type: string
-    lastUpdated:
-      name: _lastUpdated
-      in: query
-      description: Filter by last modification date (prefixes eq,ne,gt,lt,ge,le).
-      required: false
-      schema:
-        type: string
   securitySchemes:
     smartOnFhir:
       type: oauth2
