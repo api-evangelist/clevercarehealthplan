@@ -125,17 +125,17 @@ components:
               resource:
                 type: object
   parameters:
-    lastUpdated:
-      name: _lastUpdated
-      in: query
-      description: Filter by last modification date (prefixes eq,ne,gt,lt,ge,le).
-      required: false
-      schema:
-        type: string
     id:
       name: _id
       in: query
       description: Filter by logical id of the resource.
+      required: false
+      schema:
+        type: string
+    lastUpdated:
+      name: _lastUpdated
+      in: query
+      description: Filter by last modification date (prefixes eq,ne,gt,lt,ge,le).
       required: false
       schema:
         type: string
