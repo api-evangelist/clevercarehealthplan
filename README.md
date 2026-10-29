@@ -1,4 +1,4 @@
-# Clevercarehealthplan
+# Clever Care Health Plan
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,125 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Clevercarehealthplan is a company surfaced as a portfolio company of norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the enrichment pipeline.
+Clever Care Health Plan is a California Medicare Advantage (HMO and HMO C-SNP) insurer that blends Eastern and Western medicine for seniors. For developers it publishes an HL7 FHIR R4 (4.0.1) API implementing the CMS Interoperability and Patient Access final rule (CMS-9115-F): a secured Patient Access API (Patient, Coverage, and CARIN Blue Button ExplanationOfBenefit) protected with SMART-on-FHIR OAuth 2.0 / OpenID Connect, plus public, rate-limited Provider Directory and Drug Formulary APIs. The FHIR server runs on WSO2 Open Healthcare with a developer portal for app registration and API subscription.
 
-Backed by: norwest-venture-partners — https://clevercarehealthplan.com
+**Areas:** Company · Healthcare · Health Insurance · Medicare Advantage · FHIR · Interoperability · Patient Access · Provider Directory · Drug Formulary · CMS-9115-F
+
+## Clever Care Health Plan on APIs.io
+
+Everything profiled for Clever Care Health Plan is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/clevercarehealthplan/](https://apis.io/providers/clevercarehealthplan/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Clever Care Health Plan Drug Formulary API](https://apis.io/apis/clevercarehealthplan/clevercarehealthplan-drug-formulary-api/) — Public (rate limited) drug formulary resources
+- [Clever Care Health Plan Patient Access API](https://apis.io/apis/clevercarehealthplan/clevercarehealthplan-patient-access-api/) — Secured (OpenID Connect / OAuth 2.0) member data resources
+- [Clever Care Health Plan Provider Directory API](https://apis.io/apis/clevercarehealthplan/clevercarehealthplan-provider-directory-api/) — Public (rate limited) provider directory resources
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [clevercarehealthplan-fhir](https://apis.io/servers/clevercarehealthplan/clevercarehealthplan-fhir/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Clevercarehealthplan Agentic Access](https://apis.io/agentic-access/clevercarehealthplan/clevercarehealthplan-agentic-access/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Clever Care Health Plan FHIR R4 Drug Formulary API](https://apis.io/collections/clevercarehealthplan/open-clevercarehealthplan-drug-formulary-api/)
+- [Clever Care Health Plan FHIR R4 Drug Formulary Patient Access API](https://apis.io/collections/clevercarehealthplan/open-clevercarehealthplan-patient-access-api/)
+- [Clever Care Health Plan FHIR R4 Drug Formulary Provider Directory API](https://apis.io/collections/clevercarehealthplan/open-clevercarehealthplan-provider-directory-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Clevercarehealthplan Fhir Overlay](https://apis.io/overlays/clevercarehealthplan/clevercarehealthplan-fhir-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Clevercarehealthplan Authentication](https://apis.io/security/clevercarehealthplan/clevercarehealthplan-authentication/)
+- [Clevercarehealthplan Domain Security](https://apis.io/security/clevercarehealthplan/clevercarehealthplan-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Clevercarehealthplan Scopes](https://apis.io/scopes/clevercarehealthplan/clevercarehealthplan-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://clevercarehealthplan.com)
+- [Documentation](https://fhir-portal.clevercarehealthplan.com/api-docs/)
+- [Getting started](https://clevercarehealthplan.com/fhir-api-developer-resources/)
+- [API reference](https://fhir-portal.clevercarehealthplan.com/api-docs/)
+- [Sign up](https://fhir-portal.clevercarehealthplan.com/devportal)
+- [Compliance](https://clevercarehealthplan.com/medicare-compliance/)
+- [Terms of service](https://clevercarehealthplan.com/terms-of-use/)
+- [Privacy policy](https://clevercarehealthplan.com/privacy-practices/)
+
+## API Evangelist rating
+
+**Kin Score 36.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 44.5 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 39.9 |
+| Access clarity | 13.2 |
+
+**Agent readiness 27.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 43.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/clevercarehealthplan/](https://apis.io/providers/clevercarehealthplan/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Clever Care Health Plan: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/clevercarehealthplan/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
